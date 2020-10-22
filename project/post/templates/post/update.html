@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div align="center" class="jumbotron nav-color">
+    <br>
+    <h1 style="color:white"> Update Post</h1>
+</div>
+<div class="container-fluid nav-color" style="border:2px solid #cecece;width : 90%;color:white ;">
+    <br>
+    <form method="post" enctype="multipart/form-data">
+        {{form.hidden_tag()}}
+        <div class="form-group">
+            {{form.title.label(class='form-group')}} {{form.title(class='form-control')}}
+        </div>
+        <div class="form-group">
+            {{form.postImage.label(class='form-group')}} {{form.postImage()}}
+        </div>
+        <div class="form-group">
+            {{form.content.label(class='form-group')}} {{form.content(class='form-control')}}
+        </div>
+        <div align="center">
+            {{form.submit(class='btn btn-outline-light btn-lg')}}
+        </div>
+    </form>
+    <br>
+</div>
+{% endblock %}

@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!-- event list -->
+
+<form method="POST" enctype="multipart/form-data">
+    {{form.hidden_tag()}}
+
+    <div class="card event-box" style="width: 18rem">
+        <div class="card-header">
+            Quick Access
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Background {{form.profileBg()}}</li>
+            <li class="list-group-item">Profile Pic{{form.profilePic()}}</li>
+            <li class="list-group-item">Email : {{form.email()}}</li>
+            <li class="list-group-item">{{form.submit()}}</li>
+        </ul>
+    </div>
+    <!-- profile -->
+    <div class="card profile-box" style="width: 55rem; background-color:#e8f4f8 ">
+        <img src="{{url_for('static', filename='images/'+current_user.profileBg)}}" class="card-img-top" alt="...">
+        <img src="{{url_for('static', filename='images/'+current_user.profilePic)}}" class="profile-pic" alt="">
+        <div class="card-body card-body-box">
+            <br>
+            <h5 class="card-title">{{current_user.userName}}</h5>
+            <br>
+            <p class="card-text">{{form.bio()}}</p>
+        </div>
+    </div>
+</form>
+<br>
+<!-- post display -->
+<div class="container post-display nav-color-2">
+    <br>
+    <h1 class="intro-reg-h1" style="color:white" align="center">POSTS</h1>
+    <h3 style="color:white">Create post <a href="/create"><i class="fas fa-plus plus-icon"></i></a></h3>
+    <br>
+    <div class="row row-cols-1 row-cols-md-2">
+        {% for p in post %}
+        <!-- delete post modal -->
+        <div class="modal" tabindex="-1" role="dialog" id="del_post">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Delete Post ?</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <p>are you sure you want to delete ?</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <a href="/delete/{{p.id}}" class="btn btn-danger">Delete</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col mb-4">
+            <div class="card" style="opacity:0.9">
+                <img src="{{url_for('static', filename='/images/'+p.postImage)}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-title text-muted float-right">on {{p.date.strftime("%d.%m.%y")}}</p>
+                    <h5 class="card-title">{{p.title}}</h5>
+                    <hr>
+                    <p class="card-text">{{p.content[:150]}}.........<a href="/view/{{p.id}}">read full</a></p>
+                    <hr>
+                    <div>
+                        <a class="btn btn-outline-success float-left" href="/update/{{p.id}}">Update</a>
+                        <button class="btn btn-outline-danger float-right" data-toggle="modal" data-target="#del_post">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

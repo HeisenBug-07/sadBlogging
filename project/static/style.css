@@ -1,0 +1,362 @@
+/* nav bar */
+.nav-color {
+    background-color: #103761;
+    background-image: url("images/stars.png");
+}
+
+.nav-color-2 {
+    background-color: #30839f;
+    background-image: url("images/stars.png");
+}
+
+.nav-icon {
+    position: relative;
+}
+
+.nav-icon:hover {
+    transform: rotate(359deg);
+    transition: all 1s;
+}
+
+/* home page */
+.intro {
+    background: linear-gradient(#003b59, #7abdff);
+    color: white;
+    padding-top: 100px;
+}
+
+.intro-h1 {
+    letter-spacing: 15px;
+    font-size: 70px;
+    font-family: 'Candal', sans-serif;
+}
+
+.intro-h2 {
+    color: white;
+    letter-spacing: 2px;
+    font-size: 20px;
+    font-family: cursive;
+}
+
+.intro-img {
+    padding: 40px 0 20px 0;
+    width: 400px;
+}
+
+.div1 {
+    background-image: url("images/color.png");
+    background-size: cover;
+    min-height: 523px;
+    transition: all 1s ease-in;
+    display: block;
+    text-decoration: none;
+    color: white;
+}
+
+.div1:hover {
+    background-image: url("images/book.png");
+    background-size: cover;
+    min-height: 523px;
+    display: block;
+    text-decoration: none;
+    transition: all 1s ease-out;
+    color: #112652;
+}
+
+.div2 {
+    background-image: url("images/color2.jpg");
+    min-height: 250px;
+    transition: all 1s ease-in-out;
+    display: block;
+    text-decoration: none;
+    color: white;
+}
+
+.div2:hover {
+    background-image: url("images/div2.jpg");
+    display: block;
+    text-decoration: none;
+    transition: all 1s ease-in-out;
+    color: #112652;
+}
+
+.div3 {
+    background-image: url("images/color2.jpg");
+    min-height: 250px;
+    transition: all 1s ease-in-out;
+    display: block;
+    text-decoration: none;
+    color: white;
+}
+
+.div3:hover {
+    background-image: url("images/bg1.jpg");
+    display: block;
+    text-decoration: none;
+    transition: all 1s ease-in-out;
+    color: white;
+}
+
+.menu-box {
+    padding: 0 20px 0 40px;
+}
+
+.menu-h1 {
+    letter-spacing: 15px;
+    font-size: 70px;
+    position: relative;
+    padding-top: 30%;
+    font-family: 'Candal', sans-serif;
+}
+
+.menu-h2 {
+    letter-spacing: 10px;
+    font-size: 50px;
+    position: relative;
+    padding-top: 10%;
+    font-family: 'Candal', sans-serif;
+}
+
+.menu-intro-h2 {
+    letter-spacing: 2px;
+    font-size: 20px;
+    font-family: cursive;
+}
+
+.foot-box {
+    background-color: #003b59;
+    background-image: url("images/stars.png");
+}
+
+.foot-left {
+    margin-top: 4%;
+    margin-left: 10%;
+}
+
+.foot-right {
+    margin-top: 6%;
+    margin-left: 20%;
+}
+
+.foot-text {
+    color: white;
+    font-family: serif;
+    text-decoration: none;
+}
+
+.foot-icon {
+    color: #24c7b1;
+    margin-left: 10%;
+    margin-bottom: 10px;
+}
+
+.foot-icon:hover {
+    color: #f5bc42;
+}
+
+.foot-heading {
+    color: white;
+    font-size: 50px;
+    font-family: cursive;
+    padding-bottom: 15px;
+    letter-spacing: 2px;
+}
+
+.fa-fb {
+    margin-left: 5%;
+    margin-right: 6%;
+}
+
+.fa-gm {
+    margin-right: 6%;
+}
+
+.fa-foot {
+    color: #e6d330;
+}
+
+.fa-foot:hover {
+    color: #24c7b1;
+}
+
+.foot-image {
+    width: 500px;
+    padding-left: 150px;
+}
+
+/* registeration form */
+.reg-box {
+    padding-top: 60px;
+    background-color: #051937;
+    background-image: url("images/stars.png");
+    color: white;
+}
+
+.rocket {
+    position: relative;
+    width: 200px;
+    transform: rotate(25deg);
+    right: 250px;
+    top: 80px;
+}
+
+.reg {
+    width: 500px;
+    hight: 800px;
+    background-color: grey;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+
+.intro-reg-h1 {
+    letter-spacing: 5px;
+    font-size: 70px;
+    font-family: 'Candal', sans-serif;
+}
+
+/* account */
+.event-box {
+    right: 50px;
+    position: fixed;
+    display: block;
+    top: 100px;
+}
+
+.profile-box {
+    margin-top: 100px;
+    left: 50px;
+    display: block;
+}
+
+.card-img-top {
+    height: 300px;
+}
+
+.profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border-right-style: inset;
+    position: relative;
+    left: 50px;
+    bottom: 100px;
+}
+
+.card-body-box {
+    position: relative;
+    bottom: 100px;
+    padding-left: 50px;
+}
+
+.post-display {
+    border: 0.5px solid grey;
+    width: 70%;
+    margin-left: 50px;
+    margin-top: 30px;
+}
+
+.plus-icon {
+    color: white;
+    transition: all 1s;
+}
+
+.plus-icon:hover {
+    transform: rotate(315deg);
+    transition: all 1s;
+}
+
+/* read */
+.read-box {
+    color: white;
+    background-color: #103761;
+    background-image: url("images/stars.png");
+    padding: 70px;
+}
+
+/* display posts */
+.profile-pic-display {
+    margin-left: 50px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border-right-style: inset;
+    position: relative;
+}
+
+.profile-box-display {
+    width: 200px;
+    height: 200px;
+}
+
+/* about */
+.about-box {
+    margin-top: 20px;
+    background-image: url("images/div2.jpg");
+    background-size: cover;
+    min-height: 600px;
+}
+
+.about-h1 {
+    color: #c73232;
+    letter-spacing: 30px;
+    font-size: 150px;
+    font-family: 'Candal', sans-serif;
+    position: relative;
+    top: 300px;
+    left: 500px;
+}
+
+.letter-e {
+    color: #f5bc42;
+}
+
+.letter-e:hover {
+    color: #24c7b1;
+    transform: rotate(359deg);
+    transition: all 0.5s;
+}
+
+.about-h2 {
+    color: white;
+    background-color: rgba(50, 199, 115, 0.5);
+    letter-spacing: 2px;
+    font-size: 30px;
+    font-family: cursive;
+    position: relative;
+    top: 300px;
+    left: 480px;
+    display: inline-block;
+}
+
+.about-h2:hover {
+    color: white;
+    background-color: rgba(50, 199, 115, 0.5);
+    letter-spacing: 2px;
+    font-size: 35px;
+    font-family: cursive;
+    position: relative;
+    top: 300px;
+    left: 460px;
+    display: inline-block;
+    transition: all 0.5s;
+}
+.contact {
+    background: linear-gradient(#003b59, #7abdff);
+    color: white;
+    padding-top: 200x;
+}
+
+/* error pages */
+.error-h1 {
+    padding-top : 150px ;
+    letter-spacing: 15px;
+    font-size: 100px;
+    color : #003b59;
+    font-family: 'Candal', sans-serif;
+}
+.error-h2 {
+    color: red;
+    letter-spacing: 2px;
+    font-size: 30px;
+    font-family: cursive;
+}

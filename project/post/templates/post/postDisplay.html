@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container" style="margin-left : 100px; margin-top:100px;">
+    {% for p in post.items %}
+    <div class="card">
+        <div class="card-header">
+            <div class="row">
+
+                <div class="col-2">
+                    <img src="{{url_for('static', filename='/images/'+p.user.profilePic)}}" class="profile-pic-display" alt="">
+                </div>
+                <div class="col-10">
+                    <h3> <a href="/viewAccount/{{p.userId}}">{{p.user.userName}}</a></h3>
+                    <p class="">{{p.user.bio}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">{{p.title}}</h5>
+            <div class="row">
+                <div class="col-9">
+                    <p class="card-text" style="letter-spacing:2px;">{{p.content[:350]}}<a href="/view/{{p.id}}"> read full post.......</a></p>
+                </div>
+                <div class="col-3">
+                    <img src="{{url_for('static', filename='/images/'+p.postImage)}}" class="profile-box-display" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br>
+    {% endfor %}
+    <!-- pagination  -->
+    <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center">
+            {% for page_num in post.iter_pages(left_edge=1, right_edge=1, left_current=1, right_current=2) %}
+            {% if page_num %}
+            {% if post.page == page_num %}
+            <li class="page-item disabled">
+                <a class="page-link" href="{{url_for('post.displayPosts', page=page_num)}}">{{page_num}}</a>
+            </li>
+            {% else %}
+            <li class="page-item ">
+                <a class="page-link" href="{{url_for('post.displayPosts', page=page_num)}}">{{page_num}}</a>
+            </li>
+            {% endif %}
+            {% else %}
+            <li class="page-item disabled">
+                <a class="page-link">.......</a>
+            </li>
+            {% endif %}
+            {% endfor %}
+        </ul>
+    </nav>
+    <br><br><br>
+</div>
+{% endblock %}
